@@ -1,0 +1,385 @@
+
+
+
+h1{
+    font-family: "Amarante", serif;
+}
+
+h1{
+    font-size: 5em;
+}
+h2{
+    font-size: 3em;
+}
+h3{
+    font-size: 1.5em;
+}
+
+
+p, h2, h3, a{
+    font-family: "Aleo", serif;
+}
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Ensures full height usage */
+    flex-direction: column;
+    #root{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .menu{
+            position: fixed;
+            top:0;
+            right:0;   
+            z-index: 3;
+            box-shadow: -10px 5px 5px rgba($color: #000000, $alpha: 0.1);
+            i{
+                font-size: 2.5em;                
+                cursor: pointer;
+                pointer-events: auto;
+                padding: 20px;
+                background-color: white;
+            }
+            .ReactModalPortal{
+                .Overlay{
+                    position: fixed;
+                    top:0;
+                    right:0;
+                    box-shadow: -10px 5px 5px rgba($color: #000000, $alpha: 0.1);
+                    .Modal{
+                        display: flex;
+                        flex-direction: row;
+                        .menu_buttons{                            
+                            padding: 20px;
+                            background-color: white;
+                            display: flex ; 
+                            flex-direction: column;
+                            font-size: 2em;
+                            text-align: end;
+                        }
+                        
+                       
+                    }
+                    
+                }
+            }
+        }
+        .header{
+            background-color: white;
+            // background-image: url("./public/images/night.jpg");
+            height: 100vh;
+            width: 100%;   
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            .header_content{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                .header_block{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10vw;
+                    flex: 1;
+                    margin-left: 50px;
+                    .picture{
+                        max-width: 25%;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: end;
+                        img{
+                            width: 100%;
+                            object-fit:contain;
+                        }
+                    }
+                    .header_text{
+                        margin-top: 50px;
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        h1,h2{
+                            margin: 0 0 20px 0;
+                        }
+                        h3{
+                            margin: 30px 0 0 0;
+                        }
+                        .textDescription{
+                            flex: 1;
+                            display: flex;
+                            align-items: end;
+                            padding:0px 12vw 0px 0px;
+                            p{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+                
+                i{
+                    font-size: 6em;
+                    margin: 20px;
+                }  
+            }   
+               
+        }
+        
+        .portfolio{
+            
+            height: 110vh;
+            .app{
+                background-color: black;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top:0;
+                left:0;
+                z-index: -1;
+            }
+            .portfolio_overlay {
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                top:0;
+                left:0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .description{
+                    z-index: 0;
+                    color: white;
+                    position: fixed;
+                    top:0;
+                    right:0;
+                    width: 70%;
+                    margin-top: 6vh;
+                    margin-right: 20%;
+                    img{
+                        width: 35%;
+                        max-height: 100%;
+                        overflow: hidden;
+                        object-fit: cover;
+                    }
+
+                }
+                .buttons{
+                    z-index: 1;
+                    position: fixed;
+                    top:0;
+                    left:0;
+                    width: 100%;
+                    height: 100%;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    .buttons_overlay{
+                        width: 100%;
+                        height: 100%;
+                        margin: 20px;
+                        align-items: center;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .link{
+                            display: flex;
+                            height: 100vh;
+                            align-items: center;
+                            a{
+                                margin-top:10vh;
+                                // background-color: transparentize($color: #0267ff, $amount: 0.5);
+                                width: 100vw*0.5;
+                                height: 100vh*0.5;
+                            }
+                        }
+                        button{
+                            all: unset;
+                            cursor: pointer;
+                            pointer-events: auto; /* Ensures the button can be clicked */
+                            i{
+                                color: white;     
+                                font-size: 4em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .about_me{
+            background-color: white;
+            height: 100vh;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            .textBlock{
+                display: flex;
+                flex-direction: column;
+                margin: 20px 25vw 20px 50px;
+                flex: 1;
+                justify-content: space-between;
+
+                .block{
+                    display: flex;
+                    justify-content: space-between;
+                    height: 200px;
+                    img{
+                        width: 50%;
+                        height: 100%;
+                        max-height: 100%;
+                        overflow: hidden;
+                        object-fit: cover;
+                    }
+                    .text0{
+                        max-width: 40%;
+                    }
+                    .text1{
+                        max-width: 40%;
+                        order: 2;
+                    }
+                    .text2{
+                        max-width: 40%;
+                    }
+                }
+            }
+            h1{
+                margin: 50px 50px 0 50px;
+            }     
+        }
+        .footer{
+            background-color: black;
+            color: white;
+            a{
+                color: white;
+            }
+            padding: 20px;
+            padding-top: 10vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 90vh;
+            z-index: 2;           
+        }
+        
+    }
+
+}
+
+.hidden{
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    h1{
+        font-size: 2.8em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    h3{
+        font-size: 1em;
+    }
+    
+    html, body{
+        #root{
+            .menu{
+                i{
+                }
+                .ReactModalPortal{
+                    .Overlay{
+                        background-color: white;
+                        .Modal{
+                            flex-direction: column;
+                            align-items: end;
+                            .menu_buttons{
+                                order: 1;
+                                padding-top: 10px;
+                            }
+                            i{ 
+                                padding: 10px 20px 0  0;
+                            }
+                           
+                        }
+                        
+                    }
+                }
+            }
+            .header{
+                .header_content{
+                    .header_block{
+                        margin: 0 20vw 0 20px;
+                        flex-direction: column;
+                        // max-height: 100%;
+                        // flex: 0;
+                        gap: 2.5vh;
+                        .picture{
+                            height: 100%;
+                             max-width: 75%;
+                            img{
+                                height: 100%;
+                            }
+                        }
+                        .header_text{
+                            width: 100%;
+                            h1,h2{
+                                margin: 0 0 10px 0;
+                            }
+                            h3{
+                                margin: 0 0 0 0;
+                            }
+                            .textDescription{
+                               p{
+                                padding-top: 10px;
+                               }
+                            }
+                        }
+                    }
+                    
+                    i{
+                    }  
+                }   
+                   
+            }
+            
+            .portfolio{
+                .app{
+                }
+                .portfolio_overlay {
+                    .description{
+                        margin: 0px;
+                        h2,p{
+                            margin: 20px 0 0 20px;
+                        }
+                    }
+                    .buttons{
+                        .buttons_overlay{
+                            .link{
+                                a{
+                                }
+                            }
+                            button{
+                           
+                                i{
+                                
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .about_me{
+       
+            }
+            .footer{
+       
+            }
+            
+        }
+    
+    }
+}
