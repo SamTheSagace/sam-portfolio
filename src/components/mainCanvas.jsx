@@ -84,7 +84,7 @@ const  MainCanvas= forwardRef((props, ref) => {
         const gltf = useLoader(GLTFLoader, "./background_plane.glb");
         return (
         <>
-            <primitive object={gltf.scene} position={[0, 4, 0]} scale={2}/>             
+            <primitive object={gltf.scene} position={[0, 0, 0]} scale={2}/>             
         </>
         );
     };  
@@ -144,7 +144,7 @@ const  MainCanvas= forwardRef((props, ref) => {
         slideRight,
     }));
   const cameraPosition = [0, 0, 10]
-  const cameraPositionMobile = [0,0, 20]  
+  const cameraPositionMobile = [0,1, 15]  
 
   return (
     <div className="app">
@@ -157,13 +157,8 @@ const  MainCanvas= forwardRef((props, ref) => {
         }}
       >
         <Suspense fallback={null}> 
-          {/* <camera fov={35} position= {useScreenOrientation().startsWith("landscape") ? cameraPosition : cameraPositionMobile }
-            onCreated={({ camera }) => {
-              camera.lookAt(0, 0, 0);
-            }}
-          />            */}
           <Environment files={"./images/night.jpg"}/>
-          <Room/>
+          {/* <Room/> */}
           <pointLight position={[-8, 3, -6]} intensity={100}/>
           <pointLight position={[0, 3, 6]} intensity={100}/>
           <pointLight position={[8, 3, -6]} intensity={100}/>
@@ -172,7 +167,7 @@ const  MainCanvas= forwardRef((props, ref) => {
             <BaseScreen />
             <Screens/>
           </group>
-          {/* <OrbitControls/> */}
+          <OrbitControls/>
         </Suspense>
       </Canvas>
     </div>

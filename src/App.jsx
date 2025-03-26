@@ -73,7 +73,7 @@ export default function App() {
   
   return(
     <>
-    
+    {/* <MainCanvas ref={canvasRef}/> */}
       <div className='menu'>
         {!menuState &&<i className="fa-solid fa-bars" onClick={switchMenu}></i>}
         <ReactModal
@@ -117,7 +117,7 @@ export default function App() {
           <div className='description' ref={description}> 
               <h2>{data.projets[index].title}</h2>
               <p>{data.projets[index].text}</p>
-              <img src="./line.svg" alt="" />
+              <img src={orientation ? "./line.svg" : "./line_mobile.svg"} alt="" />
           </div>
           <div className='buttons'>
             <div className='buttons_overlay'>
@@ -139,8 +139,8 @@ export default function App() {
         
         <div className='textBlock'>
           {data.about_me.text.map((text, index)=>(
-            <div className={`block`}> 
-              <p className={`text${index}`} key={index}>{text.text}</p>
+            <div className={`block`} key={index}> 
+              <p className={`text${index}`} >{text.text}</p>
               <img src={text.image} alt="" />
             </div>
             
