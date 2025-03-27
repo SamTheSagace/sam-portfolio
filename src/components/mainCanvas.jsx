@@ -1,5 +1,3 @@
-
-
 import * as THREE from 'three'; 
 import { Canvas, useLoader } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
@@ -44,34 +42,36 @@ const  MainCanvas= forwardRef((props, ref) => {
 
       const plane = useRef()
       const initialPosition = [0, 0, 4.80137]
+      const initialPositionMobile = [0, 0, 3.03433]
+      const planePosition = useScreenOrientation().startsWith("landscape") ? initialPosition : initialPositionMobile
       return(
         <>
           <group position={[0,0,0]} rotation={[0,0,0]}>
-            <mesh useRef={plane} position={initialPosition} scale={1.5} rotation={computeOrientation}>
+            <mesh useRef={plane} position={planePosition} scale={1.5} rotation={computeOrientation}>
               <planeGeometry  args={[1.92, 1.080]} />
               <meshStandardMaterial map={orientation ? map1 : map1Mobile}/>
             </mesh>   
           </group>
           <group position={[0,0,0]} rotation={[0,Math.PI/5*2,0]}>
-            <mesh useRef={plane} position={initialPosition} scale={1.5} rotation={computeOrientation}>
+            <mesh useRef={plane} position={planePosition} scale={1.5} rotation={computeOrientation}>
               <planeGeometry  args={[1.92, 1.080]} />
               <meshStandardMaterial map={orientation ? map2 : map1Mobile}/>
             </mesh>   
           </group>
           <group position={[0,0,0]} rotation={[0,Math.PI/5*4,0]}>
-            <mesh useRef={plane} position={initialPosition} scale={1.5} rotation={computeOrientation}>
+            <mesh useRef={plane} position={planePosition} scale={1.5} rotation={computeOrientation}>
               <planeGeometry  args={[1.92, 1.080]} />
               <meshStandardMaterial map={orientation ? map3 : map1Mobile}/>
             </mesh>   
           </group>
           <group position={[0,0,0]} rotation={[0,Math.PI/5*6,0]}>
-            <mesh useRef={plane} position={initialPosition} scale={1.5} rotation={computeOrientation}>
+            <mesh useRef={plane} position={planePosition} scale={1.5} rotation={computeOrientation}>
               <planeGeometry  args={[1.92, 1.080]} />
               <meshStandardMaterial map={orientation ? map4 : map1Mobile}/>
             </mesh>   
           </group>
           <group position={[0,0,0]} rotation={[0,Math.PI/5*8,0]}>
-            <mesh useRef={plane} position={initialPosition} scale={1.5} rotation={computeOrientation}>
+            <mesh useRef={plane} position={planePosition} scale={1.5} rotation={computeOrientation}>
               <planeGeometry  args={[1.92, 1.080]} />
               <meshStandardMaterial map={orientation ? map5 : map1Mobile}/>
             </mesh>   
@@ -84,7 +84,7 @@ const  MainCanvas= forwardRef((props, ref) => {
         const gltf = useLoader(GLTFLoader, "./background_plane.glb");
         return (
         <>
-            <primitive object={gltf.scene} position={[0, 0, 0]} scale={2}/>             
+            <primitive object={gltf.scene} position={[1, 0, 0]} scale={2}/>             
         </>
         );
     };  
@@ -144,24 +144,29 @@ const  MainCanvas= forwardRef((props, ref) => {
         slideRight,
     }));
   const cameraPosition = [0, 0, 10]
-  const cameraPositionMobile = [0,1, 15]  
+  const cameraPositionMobile = [0,0, 20]  
 
   return (
     <div className="app">
       <Canvas 
         shadows
         dpr={[1,2]}
-        camera={{ fov: 35, position: useScreenOrientation().startsWith("landscape") ? cameraPosition : cameraPositionMobile }}
+        camera={{ fov: 35, position: cameraPosition }}
         onCreated={({ camera }) => {
           camera.lookAt(0, 0, 0);
         }}
       >
         <Suspense fallback={null}> 
+          {/* <camera fov={35} position= {useScreenOrientation().startsWith("landscape") ? cameraPosition : cameraPositionMobile }
+            onCreated={({ camera }) => {
+              camera.lookAt(0, 0, 0);
+            }}
+          />            */}
           <Environment files={"./images/night.jpg"}/>
           {/* <Room/> */}
-          <pointLight position={[-8, 3, -6]} intensity={100}/>
+          <pointLight position={[-15, 3, -6]} intensity={80}/>
           <pointLight position={[0, 3, 6]} intensity={100}/>
-          <pointLight position={[8, 3, -6]} intensity={100}/>
+          <pointLight position={[15, 3, -6]} intensity={80}/>
           <Plane/>
           <group ref={fullScreens} position={[0, -0.1725, 0]}>
             <BaseScreen />
