@@ -14,7 +14,9 @@ h2{
 h3{
     font-size: 1.5em;
 }
-
+p{
+    font-size: 1em;
+}
 
 p, h2, h3, a{
     font-family: "Aleo", serif;
@@ -160,7 +162,7 @@ html, body{
                     margin-top: 6vh;
                     margin-right: 20%;
                     img{
-                        width: 35%;
+                        width: 25%;
                         max-height: 100%;
                         overflow: hidden;
                         object-fit: cover;
@@ -219,7 +221,7 @@ html, body{
             .textBlock{
                 display: flex;
                 flex-direction: column;
-                margin: 20px 25vw 20px 50px;
+                margin: 20px 80px 20px 50px;
                 flex: 1;
                 justify-content: space-between;
 
@@ -227,6 +229,9 @@ html, body{
                     display: flex;
                     justify-content: space-between;
                     height: 200px;
+                    p{
+                        margin: 0px;
+                    }
                     img{
                         width: 50%;
                         height: 100%;
@@ -355,7 +360,7 @@ html, body{
                     .description{
                         right: unset;
                         left: 0;
-                        margin: 0 0 0 35px;
+                        margin: 2vh 0 0 35px;
                         h2,p{
                             
                             margin: 20px 0 10px 0;
@@ -368,6 +373,8 @@ html, body{
                         .buttons_overlay{
                             .link{
                                 a{
+                                    width: 65vw;
+                                    height: 65vh;
                                 }
                             }
                             button{
@@ -400,6 +407,123 @@ html, body{
                 }
                 h1{
                     margin: 20px 50px 0 20px;
+                }     
+            }
+            .footer{
+                a{
+                }
+            }
+            
+        }
+    
+    }
+}
+
+@media (max-width: 1030px) {
+    h1{
+        font-size: 3.5em;
+    }
+    h2{
+    }
+    h3{
+    }
+    p{
+        font-size: 1em;
+    }
+
+    html, body{
+        #root{
+            .menu{
+                i{
+                }
+                .ReactModalPortal{
+                    .Overlay{
+                        .Modal{
+                            .menu_buttons{
+                            }
+                            i{ 
+                            }
+                           
+                        }
+                        
+                    }
+                }
+            }
+            .header{
+                .header_content{
+                    .header_block{
+                        .picture{
+                            img{
+                            }
+                        }
+                        .header_text{
+                            h1,h2{
+                              
+                            }
+                            h3{
+                                margin-top: 30px;
+                            }
+                            .textDescription{
+                                padding-bottom: 0px;
+                               p{
+                               }
+                            }
+                        }
+                    }
+                    
+                    i{
+                    }  
+                }   
+                   
+            }
+            
+            .portfolio{
+                .app{
+                }
+                .portfolio_overlay {
+                    .description{
+                        h2{
+                            margin: 0px;
+                        }
+                        img{
+                           
+                        }
+                    }
+                    .buttons{
+                        .buttons_overlay{
+                            .link{
+                                a{
+                                }
+                            }
+                            button{
+                           
+                                i{
+                                
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .about_me{
+                .textBlock{
+                    .block{
+                        height: 140px;
+                        img{
+                            width: 40%;
+                        }
+                        .text0{
+                            max-width: 55%;
+                        }
+                        .text1{
+                            max-width: 55%;
+                        }
+                        .text2{
+                            max-width: 55%;
+                        }
+                    }
+                }
+                h1{
                 }     
             }
             .footer{

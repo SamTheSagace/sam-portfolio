@@ -10,18 +10,22 @@ export default function App() {
   const [index, setIndex] = useState(0)
   const linkRef = useRef()
   const description =useRef()
+  const [animation, setAnimation] = useState(false);
 
   function hide(){
-    linkRef.current.classList.add("hidden")
-    description.current.classList.add("hidden")
-    setTimeout(()=>{
-      linkRef.current.classList.remove("hidden")
-      description.current.classList.remove("hidden")
-    },1000)
-  };
-
+    linkRef.current.classList.add("hidden");
+    description.current.classList.add("hidden");
+  
+    setTimeout(() => {
+      linkRef.current.classList.remove("hidden");
+      description.current.classList.remove("hidden");
+      setAnimation(false); // Use state setter
+    }, 1000);
+  }
 
   function right(){
+    if (animation) return;
+    setAnimation(true);
     hide()
     canvasRef.current?.slideRight()
     if(index === 4){
@@ -31,6 +35,8 @@ export default function App() {
   };
 
   function left(){
+    if (animation) return;
+    setAnimation(true);
     hide()
     canvasRef.current?.slideLeft()
     if(index === 0){
@@ -55,7 +61,7 @@ export default function App() {
     return orientation;
   }
 
-  const [menuState, setMenuState]= useState(useScreenOrientation().startsWith("landscape") ?  true : false)
+  const [menuState, setMenuState]= useState(false)
   
   const orientation = useScreenOrientation().startsWith("landscape") ?  true : false;
 
@@ -125,7 +131,7 @@ export default function App() {
                 <i className="fa-solid fa-angles-left"></i>
               </button>
               <div className='link'>
-                <a href="https://samthesagace.github.io/Booki/" ref={linkRef}></a>
+                <a href={data.links[index]} ref={linkRef}></a>
               </div>
               <button onClick={() => right() }>
                 <i className="fa-solid fa-angles-right"></i>
