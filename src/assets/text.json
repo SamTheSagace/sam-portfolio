@@ -3,50 +3,51 @@
       "title": "Bienvenue sur mon site !",
       "name": "Samuel Guesdon",
       "job": "Développeur Full-Stack",
-      "description":"Je suis quelqu'un de très curieux, de touche-à-tout. De par cela, je me nourris tout le temps : je développe de nouveaux process et j'expérimente avec de nouveaux logiciels, ce qui me permet de fournir un travail toujours plus efficace pour mes clients."
+      "description": "Je suis quelqu'un de très curieux, un touche-à-tout. De ce fait, je me nourris en permanence : je développe de nouveaux processus et j'expérimente avec de nouveaux logiciels, ce qui me permet de fournir un travail toujours plus efficace pour mes clients."
    },
    "menu": [
-      { "id":1,"title": "Portfolio", "link": "#portfolio", "target":"_self" },
-      { "id":2,"title": "Qui suis-je ?", "link": "#about_me", "target":"_self"  },
-      { "id":3,"title": "Me contacter", "link": "#contact_me", "target":"_self"  },
-      { "id":4,"title": "Mon CV", "link": "https://drive.google.com/file/d/1i-URv6atmKrpFxm9nt2-nicu2riB2jX5/view?usp=sharing", "target":"_blank"  },
-      { "id":5,"title": "Design", "link": "https://samuel.framer.website/", "target":"_blank"  }
+      { "id": 1, "title": "Portfolio", "link": "#portfolio", "target": "_self" },
+      { "id": 2, "title": "Qui suis-je ?", "link": "#about_me", "target": "_self" },
+      { "id": 3, "title": "Me contacter", "link": "#contact_me", "target": "_self" },
+      { "id": 4, "title": "Mon CV", "link": "https://drive.google.com/file/d/1i-URv6atmKrpFxm9nt2-nicu2riB2jX5/view?usp=sharing", "target": "_blank" },
+      { "id": 5, "title": "Design", "link": "https://samuel.framer.website/", "target": "_blank" }
    ],
    "projets": [
       { "id": 1, "title": "Kasa", "text": "Créer un site en utilisant le framework React et développer l’ensemble de l’application, les composants React, les routes React Router, en suivant les maquettes Figma.", "git-link": "", "other-link": "" },
-      { "id": 2, "title": "Booki", "text": "L’entreprise souhaite développer un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix. J'ai été chargé d'intégrer l'interface du site avec du code HTML et CSS.", "git-link": "", "other-link": "" },
-      { "id": 3, "title": "Sophie Bluel", "text": "Faire la connexion entre le front-end et le serveur, notamment avec la gallery des projets, la connexion admin, et l'ajout / suppression de projets", "git-link": "", "other-link": "" },
-      { "id": 4, "title": "Nina Carducci", "text": "Débuggez, optimisez et rajoutez des outils de référencement sur un site portfolio déjà en place.", "git-link": "", "other-link": "" },
-      { "id": 5, "title": "Grimoire", "text": "Développement de la partie Backend du projet, toute les apis et les middleware nécessaire au login, upload, modification et notations.", "git-link": "", "other-link": "" }
+      { "id": 2, "title": "Booki", "text": "L’entreprise souhaite développer un site Internet permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix. J'ai été chargé d'intégrer l'interface du site avec du code HTML et CSS.", "git-link": "", "other-link": "" },
+      { "id": 3, "title": "Sophie Bluel", "text": "Faire la connexion entre le front-end et le serveur, notamment avec la galerie des projets, la connexion admin, et l'ajout/suppression de projets.", "git-link": "", "other-link": "" },
+      { "id": 4, "title": "Nina Carducci", "text": "Déboguer, optimiser et ajouter des outils de référencement sur un site portfolio déjà en place.", "git-link": "", "other-link": "" },
+      { "id": 5, "title": "Grimoire", "text": "Développement de la partie backend du projet, toutes les APIs et les middlewares nécessaires au login, à l'upload, à la modification et aux notations.", "git-link": "", "other-link": "" }
    ],
-   "about_me":{
-    "title":"Qui suis-je ?",
-    "text":[        
-        {"text":"Diplomé d'un Mastère en Design Interactif (UI/UX et Motion Design) il y a deux ans, j'ai décidé de me reconvertir en fin d'année 2024 vers le domaine de l'informatique, en faisant un Mastère Expert en développement Full Stack, qui viens dans la suite logique de mon apprentissage, de la partie design du web je passe à la partie 'production'", 
-        "image":"https://www.lp-thimonnier.fr/wp-content/uploads/2024/05/recuperer-diplome-1200x900.jpg"
-        },
-        {"text":"Je suis quelqu'un de très curieux, De par cela, je me nourris tout le temps : je développe de nouveaux process et j'expérimente avec de nouveaux logiciels, ce qui me permet de fournir un travail toujours plus efficace pour mes clients.", 
-        "image":"https://medias.lavie.fr/api/v1/images/view/63ff0eb00e6a26342365eb39/width_1000/image.jpg"
-        }, 
-        {"text":"J'aime dessiner, faire de la guitare, les balades en forêts, l'impression 3D et l'electronique, le motion design 2D et 3D, les jeux-vidéos (en tant qu'utilisateur et concepteur), etc. etc. En bref, je suis un vrai touche à tout", 
-        "image":"https://www.reformes.ch/sites/default/files/styles/entete/public/data/images/article/collage-2231082_1920.jpg?itok=a-dglQBm"
-        }
-    ]
+   "about_me": {
+      "title": "Qui suis-je ?",
+      "text": [
+         {
+            "text": "Diplômé d'un Mastère en Design Interactif (UI/UX et Motion Design) il y a deux ans, j'ai décidé de me reconvertir en fin d'année 2024 vers le domaine de l'informatique, en faisant un Mastère Expert en développement Full Stack, qui vient dans la suite logique de mon apprentissage. De la partie design du web, je passe à la partie 'production'.",
+            "image": "https://www.lp-thimonnier.fr/wp-content/uploads/2024/05/recuperer-diplome-1200x900.jpg"
+         },
+         {
+            "text": "Je suis quelqu'un de très curieux. De ce fait, je me nourris en permanence : je développe de nouveaux processus et j'expérimente avec de nouveaux logiciels, ce qui me permet de fournir un travail toujours plus efficace pour mes clients.",
+            "image": "https://medias.lavie.fr/api/v1/images/view/63ff0eb00e6a26342365eb39/width_1000/image.jpg"
+         },
+         {
+            "text": "J'aime dessiner, faire de la guitare, les balades en forêt, l'impression 3D et l'électronique, le motion design 2D et 3D, les jeux vidéo (en tant qu'utilisateur et concepteur), etc. En bref, je suis un vrai touche-à-tout.",
+            "image": "https://www.reformes.ch/sites/default/files/styles/entete/public/data/images/article/collage-2231082_1920.jpg?itok=a-dglQBm"
+         }
+      ]
    },
-   "contact_me":{
-    "title":"Mes contacts:",
-    "mail":"guesdon.samuelPro@gmail.com",
-    "tel":"06 73 28 65 67",
-    "git":"https://github.com/SamTheSagace",
-    "bento": "https://bento.me/samsagace"
+   "contact_me": {
+      "title": "Mes contacts :",
+      "mail": "guesdon.samuelPro@gmail.com",
+      "tel": "06 73 28 65 67",
+      "git": "https://github.com/SamTheSagace",
+      "bento": "https://bento.me/samsagace"
    },
-   "links":[
+   "links": [
       "https://github.com/SamTheSagace/Kasa",
       "https://samthesagace.github.io/Booki/",
       "https://github.com/SamTheSagace/Sophie-bluel",
       "https://samthesagace.github.io/Nina-Carducci/",
       "https://github.com/SamTheSagace/backendGrimoire"
-
-   ] 
-   
+   ]
 }
