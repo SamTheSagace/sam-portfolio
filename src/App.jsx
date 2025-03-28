@@ -14,11 +14,11 @@ export default function App() {
 
   function hide(){
     linkRef.current.classList.add("hidden");
-    description.current.classList.add("hidden");
+    description.current.style.display = "none";
   
     setTimeout(() => {
       linkRef.current.classList.remove("hidden");
-      description.current.classList.remove("hidden");
+      description.current.style.display = "flex";
       setAnimation(false); // Use state setter
     }, 1000);
   }
@@ -91,7 +91,7 @@ export default function App() {
         >
             <div className='menu_buttons'>
               {data.menu.map((content)=>(
-                <a href={content.link} key={content.id}>{content.title}</a>
+                <a className={content.target === "_self"? "hook": "link"} href={content.link} key={content.id} target={content.target}>{content.title}</a>
               ))}
             </div>
             <i className="fa-solid fa-xmark" onClick={switchMenu}></i>
@@ -108,6 +108,7 @@ export default function App() {
               <h3>{data.header.job}</h3>
               <div className='textDescription'>
                 <p>{data.header.description}</p>
+                
               </div>
             </div>
             <div className='picture'>
@@ -121,8 +122,11 @@ export default function App() {
         <MainCanvas ref={canvasRef}/>
         <div className='portfolio_overlay'>
           <div className='description' ref={description}> 
-              <h2>{data.projets[index].title}</h2>
-              <p>{data.projets[index].text}</p>
+              <div className='description_Block'>
+                <h2>{data.projets[index].title}</h2>
+                <p>{data.projets[index].text}</p>
+                <a href={data.links[index]}>Cliquez moi !</a>
+              </div>
               <img src={orientation ? "./line.svg" : "./line_mobile.svg"} alt="" />
           </div>
           <div className='buttons'>

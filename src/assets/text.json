@@ -6,10 +6,11 @@
       "description":"Je suis quelqu'un de très curieux, de touche-à-tout. De par cela, je me nourris tout le temps : je développe de nouveaux process et j'expérimente avec de nouveaux logiciels, ce qui me permet de fournir un travail toujours plus efficace pour mes clients."
    },
    "menu": [
-      { "id":1,"title": "Portfolio", "link": "#portfolio" },
-      { "id":2,"title": "About Me", "link": "#about_me" },
-      { "id":3,"title": "Contact Me", "link": "#contact_me" },
-      { "id":4,"title": "My CV", "link": "https://drive.google.com/file/d/1i-URv6atmKrpFxm9nt2-nicu2riB2jX5/view?usp=sharing" }
+      { "id":1,"title": "Portfolio", "link": "#portfolio", "target":"_self" },
+      { "id":2,"title": "Qui suis-je ?", "link": "#about_me", "target":"_self"  },
+      { "id":3,"title": "Me contacter", "link": "#contact_me", "target":"_self"  },
+      { "id":4,"title": "Mon CV", "link": "https://drive.google.com/file/d/1i-URv6atmKrpFxm9nt2-nicu2riB2jX5/view?usp=sharing", "target":"_blank"  },
+      { "id":5,"title": "Design", "link": "https://samuel.framer.website/", "target":"_blank"  }
    ],
    "projets": [
       { "id": 1, "title": "Kasa", "text": "Créer un site en utilisant le framework React et développer l’ensemble de l’application, les composants React, les routes React Router, en suivant les maquettes Figma.", "git-link": "", "other-link": "" },

@@ -5,17 +5,11 @@
     <style>
       .st0 {
         fill: #fff;
-      }
-
-      .st1 {
-        fill: none;
-        stroke: #fff;
+        stroke: #231f20;
         stroke-miterlimit: 10;
-        stroke-width: 12px;
+        stroke-width: 2px;
       }
     </style>
   </defs>
-  <polyline class="st1" points="49.93 14.04 268.65 375.3 772.45 375.3"/>
-  <circle class="st0" cx="49.93" cy="14.04" r="14.04"/>
-  <circle class="st0" cx="772.45" cy="375.3" r="14.04"/>
+  <path class="st0" d="M64,14c0,2.9-.9,5.5-2.3,7.7l210.4,347.5h487.7c2.3-4.7,7.1-8,12.7-8,7.8,0,14,6.3,14,14s-6.3,14-14,14c-5.6,0-10.4-3.3-12.7-8h-494.5S51.4,28,51.4,28c-.5,0-1,0-1.4,0-7.8,0-14-6.3-14-14,0-7.8,6.3-14,14-14s14,6.3,14,14Z"/>
 </svg>
