@@ -93,9 +93,9 @@ const  MainCanvas= forwardRef((props, ref) => {
         </>
         );
     };  
-  const modelsBase = orientation ? "computers" : "mobiles"
+
+    const modelsBase = orientation ? "computers" : "mobiles"
     const BaseScreen = () => {      
-        
         const gltf = useLoader(GLTFLoader, `./${modelsBase}.glb`);
         return (
         <>
@@ -103,15 +103,6 @@ const  MainCanvas= forwardRef((props, ref) => {
         </>
         );
     };
-
-    function Room() {
-      return (
-        <mesh>
-          <cylinderGeometry args={[20, 20, 80]} />
-          <meshStandardMaterial color={"black"} side={THREE.BackSide} />
-        </mesh>
-      );
-    }
   
     const [isAnimating, setIsAnimating] = useState(false);
 
@@ -162,11 +153,6 @@ const  MainCanvas= forwardRef((props, ref) => {
         }}
       >
         <Suspense fallback={null}> 
-          {/* <camera fov={35} position= {useScreenOrientation().startsWith("landscape") ? cameraPosition : cameraPositionMobile }
-            onCreated={({ camera }) => {
-              camera.lookAt(0, 0, 0);
-            }}
-          />            */}
           <Environment files={"./images/night.jpg"}/>
           {/* <Room/> */}
           <pointLight position={[-15, 3, -6]} intensity={80}/>
